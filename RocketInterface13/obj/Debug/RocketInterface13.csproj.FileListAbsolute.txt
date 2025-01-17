@@ -1,0 +1,17 @@
+C:\Users\CERENSULTANÇETİN\Source\Repos\RocketInterface13\bin\Debug\RocketInterface13.exe.config
+C:\Users\CERENSULTANÇETİN\Source\Repos\RocketInterface13\bin\Debug\RocketInterface13.exe
+C:\Users\CERENSULTANÇETİN\Source\Repos\RocketInterface13\bin\Debug\RocketInterface13.pdb
+C:\Users\CERENSULTANÇETİN\Source\Repos\RocketInterface13\bin\Debug\GMap.NET.Core.dll
+C:\Users\CERENSULTANÇETİN\Source\Repos\RocketInterface13\bin\Debug\GMap.NET.WindowsForms.dll
+C:\Users\CERENSULTANÇETİN\Source\Repos\RocketInterface13\bin\Debug\System.IO.Ports.dll
+C:\Users\CERENSULTANÇETİN\Source\Repos\RocketInterface13\bin\Debug\System.IO.Ports.xml
+C:\Users\CERENSULTANÇETİN\Source\Repos\RocketInterface13\obj\Debug\RocketInterface13.csproj.AssemblyReference.cache
+C:\Users\CERENSULTANÇETİN\Source\Repos\RocketInterface13\obj\Debug\RocketInterface13.GroundStation.resources
+C:\Users\CERENSULTANÇETİN\Source\Repos\RocketInterface13\obj\Debug\RocketInterface13.Properties.Resources.resources
+C:\Users\CERENSULTANÇETİN\Source\Repos\RocketInterface13\obj\Debug\RocketInterface13.csproj.GenerateResource.cache
+C:\Users\CERENSULTANÇETİN\Source\Repos\RocketInterface13\obj\Debug\RocketInterface13.csproj.CoreCompileInputs.cache
+C:\Users\CERENSULTANÇETİN\Source\Repos\RocketInterface13\obj\Debug\RocketIn.1C2035AF.Up2Date
+C:\Users\CERENSULTANÇETİN\Source\Repos\RocketInterface13\obj\Debug\RocketInterface13.exe
+C:\Users\CERENSULTANÇETİN\Source\Repos\RocketInterface13\obj\Debug\RocketInterface13.pdb
+C:\Users\CERENSULTANÇETİN\Source\Repos\RocketInterface13\bin\Debug\Newtonsoft.Json.dll
+C:\Users\CERENSULTANÇETİN\Source\Repos\RocketInterface13\bin\Debug\Newtonsoft.Json.xml
