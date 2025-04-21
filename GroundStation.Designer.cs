@@ -28,6 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.groundstationbutton = new System.Windows.Forms.Button();
             this.teststationbutton = new System.Windows.Forms.Button();
             this.payloadbutton = new System.Windows.Forms.Button();
@@ -45,7 +50,7 @@
             this.label4port = new System.Windows.Forms.Label();
             this.port4radioButton = new System.Windows.Forms.RadioButton();
             this.parasutgroupBox = new System.Windows.Forms.GroupBox();
-            this.buttonaa = new System.Windows.Forms.Button();
+            this.button400h600 = new System.Windows.Forms.Button();
             this.buttonapogee = new System.Windows.Forms.Button();
             this.pictureBoxparasut2iconclose = new System.Windows.Forms.PictureBox();
             this.pictureBoxparasut1iconclose = new System.Windows.Forms.PictureBox();
@@ -55,7 +60,25 @@
             this.labelparasüt1pasif = new System.Windows.Forms.Label();
             this.labelparasut2 = new System.Windows.Forms.Label();
             this.labelparasut1 = new System.Windows.Forms.Label();
+            this.chartTelemetry = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.Connect2button = new System.Windows.Forms.Button();
+            this.comboBoxPorts = new System.Windows.Forms.ComboBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.labelGyroX = new System.Windows.Forms.Label();
+            this.labelGyroY = new System.Windows.Forms.Label();
+            this.labelGyroZ = new System.Windows.Forms.Label();
+            this.labelAccX = new System.Windows.Forms.Label();
+            this.labelAccY = new System.Windows.Forms.Label();
+            this.labelAccZ = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.verilergroupBox = new System.Windows.Forms.GroupBox();
+            this.pictureBoxgithub = new System.Windows.Forms.PictureBox();
+            this.pictureBoxlinkedin = new System.Windows.Forms.PictureBox();
+            this.pictureBoxinstagram = new System.Windows.Forms.PictureBox();
+            this.pictureBoxyoutube = new System.Windows.Forms.PictureBox();
             this.rocketlogopictureBox = new System.Windows.Forms.PictureBox();
+            this.labelenlemgps = new System.Windows.Forms.Label();
+            this.labelboylamgps = new System.Windows.Forms.Label();
             this.alıcıayarlarıgroupBox.SuspendLayout();
             this.vericiayarlarıgroupBox.SuspendLayout();
             this.parasutgroupBox.SuspendLayout();
@@ -63,6 +86,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxparasut1iconclose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxparasut2ıcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxparasut1ıcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartTelemetry)).BeginInit();
+            this.verilergroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxgithub)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxlinkedin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxinstagram)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxyoutube)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rocketlogopictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,6 +125,7 @@
             this.payloadbutton.TabIndex = 3;
             this.payloadbutton.Text = "Payload";
             this.payloadbutton.UseVisualStyleBackColor = true;
+            this.payloadbutton.Click += new System.EventHandler(this.Payloadbutton_Click);
             // 
             // alıcıayarlarıgroupBox
             // 
@@ -201,7 +231,7 @@
             this.vericiayarlarıgroupBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.vericiayarlarıgroupBox.Location = new System.Drawing.Point(232, 159);
             this.vericiayarlarıgroupBox.Name = "vericiayarlarıgroupBox";
-            this.vericiayarlarıgroupBox.Size = new System.Drawing.Size(225, 154);
+            this.vericiayarlarıgroupBox.Size = new System.Drawing.Size(225, 163);
             this.vericiayarlarıgroupBox.TabIndex = 5;
             this.vericiayarlarıgroupBox.TabStop = false;
             this.vericiayarlarıgroupBox.Text = "Verici Ayarları";
@@ -252,7 +282,7 @@
             // 
             this.parasutgroupBox.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.parasutgroupBox.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.parasutgroupBox.Controls.Add(this.buttonaa);
+            this.parasutgroupBox.Controls.Add(this.button400h600);
             this.parasutgroupBox.Controls.Add(this.buttonapogee);
             this.parasutgroupBox.Controls.Add(this.pictureBoxparasut2iconclose);
             this.parasutgroupBox.Controls.Add(this.pictureBoxparasut1iconclose);
@@ -270,15 +300,15 @@
             this.parasutgroupBox.TabStop = false;
             this.parasutgroupBox.Text = "Paraşüt Durumu";
             // 
-            // buttonaa
+            // button400h600
             // 
-            this.buttonaa.Location = new System.Drawing.Point(126, 182);
-            this.buttonaa.Name = "buttonaa";
-            this.buttonaa.Size = new System.Drawing.Size(75, 33);
-            this.buttonaa.TabIndex = 9;
-            this.buttonaa.Text = "aa";
-            this.buttonaa.UseVisualStyleBackColor = true;
-            this.buttonaa.Click += new System.EventHandler(this.Buttonaa_Click);
+            this.button400h600.Location = new System.Drawing.Point(115, 182);
+            this.button400h600.Name = "button400h600";
+            this.button400h600.Size = new System.Drawing.Size(104, 33);
+            this.button400h600.TabIndex = 9;
+            this.button400h600.Text = "400<h<600";
+            this.button400h600.UseVisualStyleBackColor = true;
+            this.button400h600.Click += new System.EventHandler(this.Button400h600_Click);
             // 
             // buttonapogee
             // 
@@ -293,7 +323,7 @@
             // pictureBoxparasut2iconclose
             // 
             this.pictureBoxparasut2iconclose.Image = global::RocketInterface13.Properties.Resources.Close;
-            this.pictureBoxparasut2iconclose.Location = new System.Drawing.Point(130, 132);
+            this.pictureBoxparasut2iconclose.Location = new System.Drawing.Point(141, 132);
             this.pictureBoxparasut2iconclose.Name = "pictureBoxparasut2iconclose";
             this.pictureBoxparasut2iconclose.Size = new System.Drawing.Size(49, 44);
             this.pictureBoxparasut2iconclose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -313,7 +343,7 @@
             // pictureBoxparasut2ıcon
             // 
             this.pictureBoxparasut2ıcon.Image = global::RocketInterface13.Properties.Resources.parachute;
-            this.pictureBoxparasut2ıcon.Location = new System.Drawing.Point(130, 50);
+            this.pictureBoxparasut2ıcon.Location = new System.Drawing.Point(140, 50);
             this.pictureBoxparasut2ıcon.Name = "pictureBoxparasut2ıcon";
             this.pictureBoxparasut2ıcon.Size = new System.Drawing.Size(49, 55);
             this.pictureBoxparasut2ıcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -334,7 +364,7 @@
             // 
             this.labelparasut2pasif.AutoSize = true;
             this.labelparasut2pasif.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.labelparasut2pasif.Location = new System.Drawing.Point(136, 108);
+            this.labelparasut2pasif.Location = new System.Drawing.Point(146, 108);
             this.labelparasut2pasif.Name = "labelparasut2pasif";
             this.labelparasut2pasif.Size = new System.Drawing.Size(43, 20);
             this.labelparasut2pasif.TabIndex = 3;
@@ -354,7 +384,7 @@
             // labelparasut2
             // 
             this.labelparasut2.AutoSize = true;
-            this.labelparasut2.Location = new System.Drawing.Point(115, 27);
+            this.labelparasut2.Location = new System.Drawing.Point(126, 27);
             this.labelparasut2.Name = "labelparasut2";
             this.labelparasut2.Size = new System.Drawing.Size(75, 20);
             this.labelparasut2.TabIndex = 1;
@@ -369,6 +399,169 @@
             this.labelparasut1.TabIndex = 0;
             this.labelparasut1.Text = "1.Paraşüt";
             // 
+            // chartTelemetry
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chartTelemetry.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartTelemetry.Legends.Add(legend1);
+            this.chartTelemetry.Location = new System.Drawing.Point(2, 56);
+            this.chartTelemetry.Name = "chartTelemetry";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.EmptyPointStyle.MarkerSize = 10;
+            series1.Legend = "Legend1";
+            series1.Name = "Sıcaklık Grafiği";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Legend = "Legend1";
+            series2.Name = "Basınç Grafiği";
+            this.chartTelemetry.Series.Add(series1);
+            this.chartTelemetry.Series.Add(series2);
+            this.chartTelemetry.Size = new System.Drawing.Size(275, 218);
+            this.chartTelemetry.TabIndex = 8;
+            this.chartTelemetry.Text = "chart1";
+            // 
+            // Connect2button
+            // 
+            this.Connect2button.Location = new System.Drawing.Point(154, 21);
+            this.Connect2button.Name = "Connect2button";
+            this.Connect2button.Size = new System.Drawing.Size(121, 29);
+            this.Connect2button.TabIndex = 9;
+            this.Connect2button.Text = "Bağlan";
+            this.Connect2button.UseVisualStyleBackColor = true;
+            this.Connect2button.Click += new System.EventHandler(this.Connect2button_Click);
+            // 
+            // comboBoxPorts
+            // 
+            this.comboBoxPorts.FormattingEnabled = true;
+            this.comboBoxPorts.Location = new System.Drawing.Point(6, 21);
+            this.comboBoxPorts.Name = "comboBoxPorts";
+            this.comboBoxPorts.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxPorts.TabIndex = 10;
+            // 
+            // labelGyroX
+            // 
+            this.labelGyroX.AutoSize = true;
+            this.labelGyroX.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelGyroX.Location = new System.Drawing.Point(9, 288);
+            this.labelGyroX.Name = "labelGyroX";
+            this.labelGyroX.Size = new System.Drawing.Size(78, 20);
+            this.labelGyroX.TabIndex = 11;
+            this.labelGyroX.Text = "Gyro X : 0";
+            // 
+            // labelGyroY
+            // 
+            this.labelGyroY.AutoSize = true;
+            this.labelGyroY.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelGyroY.Location = new System.Drawing.Point(10, 308);
+            this.labelGyroY.Name = "labelGyroY";
+            this.labelGyroY.Size = new System.Drawing.Size(77, 20);
+            this.labelGyroY.TabIndex = 12;
+            this.labelGyroY.Text = "Gyro Y : 0";
+            // 
+            // labelGyroZ
+            // 
+            this.labelGyroZ.AutoSize = true;
+            this.labelGyroZ.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelGyroZ.Location = new System.Drawing.Point(10, 328);
+            this.labelGyroZ.Name = "labelGyroZ";
+            this.labelGyroZ.Size = new System.Drawing.Size(77, 20);
+            this.labelGyroZ.TabIndex = 13;
+            this.labelGyroZ.Text = "Gyro Z : 0";
+            // 
+            // labelAccX
+            // 
+            this.labelAccX.AutoSize = true;
+            this.labelAccX.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelAccX.Location = new System.Drawing.Point(150, 288);
+            this.labelAccX.Name = "labelAccX";
+            this.labelAccX.Size = new System.Drawing.Size(69, 20);
+            this.labelAccX.TabIndex = 14;
+            this.labelAccX.Text = "Acc X : 0";
+            // 
+            // labelAccY
+            // 
+            this.labelAccY.AutoSize = true;
+            this.labelAccY.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelAccY.Location = new System.Drawing.Point(150, 312);
+            this.labelAccY.Name = "labelAccY";
+            this.labelAccY.Size = new System.Drawing.Size(68, 20);
+            this.labelAccY.TabIndex = 15;
+            this.labelAccY.Text = "Acc Y : 0";
+            // 
+            // labelAccZ
+            // 
+            this.labelAccZ.AutoSize = true;
+            this.labelAccZ.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelAccZ.Location = new System.Drawing.Point(150, 332);
+            this.labelAccZ.Name = "labelAccZ";
+            this.labelAccZ.Size = new System.Drawing.Size(68, 20);
+            this.labelAccZ.TabIndex = 16;
+            this.labelAccZ.Text = "Acc Z : 0";
+            // 
+            // verilergroupBox
+            // 
+            this.verilergroupBox.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.verilergroupBox.Controls.Add(this.chartTelemetry);
+            this.verilergroupBox.Controls.Add(this.labelAccZ);
+            this.verilergroupBox.Controls.Add(this.comboBoxPorts);
+            this.verilergroupBox.Controls.Add(this.labelAccY);
+            this.verilergroupBox.Controls.Add(this.Connect2button);
+            this.verilergroupBox.Controls.Add(this.labelAccX);
+            this.verilergroupBox.Controls.Add(this.labelGyroX);
+            this.verilergroupBox.Controls.Add(this.labelGyroZ);
+            this.verilergroupBox.Controls.Add(this.labelGyroY);
+            this.verilergroupBox.Location = new System.Drawing.Point(476, 196);
+            this.verilergroupBox.Name = "verilergroupBox";
+            this.verilergroupBox.Size = new System.Drawing.Size(283, 353);
+            this.verilergroupBox.TabIndex = 17;
+            this.verilergroupBox.TabStop = false;
+            this.verilergroupBox.Text = "Veriler";
+            // 
+            // pictureBoxgithub
+            // 
+            this.pictureBoxgithub.Image = global::RocketInterface13.Properties.Resources.GitHub;
+            this.pictureBoxgithub.Location = new System.Drawing.Point(166, 510);
+            this.pictureBoxgithub.Name = "pictureBoxgithub";
+            this.pictureBoxgithub.Size = new System.Drawing.Size(47, 50);
+            this.pictureBoxgithub.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxgithub.TabIndex = 21;
+            this.pictureBoxgithub.TabStop = false;
+            this.pictureBoxgithub.Click += new System.EventHandler(this.PictureBoxgithub_Click);
+            // 
+            // pictureBoxlinkedin
+            // 
+            this.pictureBoxlinkedin.Image = global::RocketInterface13.Properties.Resources.LinkedIn;
+            this.pictureBoxlinkedin.Location = new System.Drawing.Point(2, 510);
+            this.pictureBoxlinkedin.Name = "pictureBoxlinkedin";
+            this.pictureBoxlinkedin.Size = new System.Drawing.Size(47, 50);
+            this.pictureBoxlinkedin.TabIndex = 20;
+            this.pictureBoxlinkedin.TabStop = false;
+            this.pictureBoxlinkedin.Click += new System.EventHandler(this.PictureBoxlinkedin_Click);
+            // 
+            // pictureBoxinstagram
+            // 
+            this.pictureBoxinstagram.Image = global::RocketInterface13.Properties.Resources.Instagram;
+            this.pictureBoxinstagram.Location = new System.Drawing.Point(55, 510);
+            this.pictureBoxinstagram.Name = "pictureBoxinstagram";
+            this.pictureBoxinstagram.Size = new System.Drawing.Size(52, 50);
+            this.pictureBoxinstagram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxinstagram.TabIndex = 19;
+            this.pictureBoxinstagram.TabStop = false;
+            this.pictureBoxinstagram.Click += new System.EventHandler(this.PictureBoxinstagram_Click);
+            // 
+            // pictureBoxyoutube
+            // 
+            this.pictureBoxyoutube.Image = global::RocketInterface13.Properties.Resources.YouTube;
+            this.pictureBoxyoutube.Location = new System.Drawing.Point(113, 510);
+            this.pictureBoxyoutube.Name = "pictureBoxyoutube";
+            this.pictureBoxyoutube.Size = new System.Drawing.Size(47, 50);
+            this.pictureBoxyoutube.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxyoutube.TabIndex = 18;
+            this.pictureBoxyoutube.TabStop = false;
+            this.pictureBoxyoutube.Click += new System.EventHandler(this.PictureBoxyoutube_Click);
+            // 
             // rocketlogopictureBox
             // 
             this.rocketlogopictureBox.Image = global::RocketInterface13.Properties.Resources.Screenshot_2025_01_05_120618;
@@ -379,12 +572,37 @@
             this.rocketlogopictureBox.TabIndex = 0;
             this.rocketlogopictureBox.TabStop = false;
             // 
+            // labelenlemgps
+            // 
+            this.labelenlemgps.AutoSize = true;
+            this.labelenlemgps.Location = new System.Drawing.Point(479, 159);
+            this.labelenlemgps.Name = "labelenlemgps";
+            this.labelenlemgps.Size = new System.Drawing.Size(54, 16);
+            this.labelenlemgps.TabIndex = 22;
+            this.labelenlemgps.Text = "Enlem:";
+            // 
+            // labelboylamgps
+            // 
+            this.labelboylamgps.AutoSize = true;
+            this.labelboylamgps.Location = new System.Drawing.Point(565, 159);
+            this.labelboylamgps.Name = "labelboylamgps";
+            this.labelboylamgps.Size = new System.Drawing.Size(63, 16);
+            this.labelboylamgps.TabIndex = 23;
+            this.labelboylamgps.Text = "Boylam:";
+            // 
             // GroundStation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1049, 559);
+            this.ClientSize = new System.Drawing.Size(1080, 559);
+            this.Controls.Add(this.labelboylamgps);
+            this.Controls.Add(this.labelenlemgps);
+            this.Controls.Add(this.pictureBoxgithub);
+            this.Controls.Add(this.pictureBoxlinkedin);
+            this.Controls.Add(this.pictureBoxinstagram);
+            this.Controls.Add(this.pictureBoxyoutube);
+            this.Controls.Add(this.verilergroupBox);
             this.Controls.Add(this.parasutgroupBox);
             this.Controls.Add(this.vericiayarlarıgroupBox);
             this.Controls.Add(this.alıcıayarlarıgroupBox);
@@ -395,6 +613,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Name = "GroundStation";
             this.Text = "GroundStation";
+            this.Load += new System.EventHandler(this.GroundStation_Load);
             this.alıcıayarlarıgroupBox.ResumeLayout(false);
             this.alıcıayarlarıgroupBox.PerformLayout();
             this.vericiayarlarıgroupBox.ResumeLayout(false);
@@ -405,8 +624,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxparasut1iconclose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxparasut2ıcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxparasut1ıcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartTelemetry)).EndInit();
+            this.verilergroupBox.ResumeLayout(false);
+            this.verilergroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxgithub)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxlinkedin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxinstagram)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxyoutube)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rocketlogopictureBox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -438,7 +665,25 @@
         private System.Windows.Forms.PictureBox pictureBoxparasut1ıcon;
         private System.Windows.Forms.PictureBox pictureBoxparasut2iconclose;
         private System.Windows.Forms.PictureBox pictureBoxparasut1iconclose;
-        private System.Windows.Forms.Button buttonaa;
+        private System.Windows.Forms.Button button400h600;
         private System.Windows.Forms.Button buttonapogee;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartTelemetry;
+        private System.Windows.Forms.Button Connect2button;
+        private System.Windows.Forms.ComboBox comboBoxPorts;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label labelGyroX;
+        private System.Windows.Forms.Label labelGyroY;
+        private System.Windows.Forms.Label labelGyroZ;
+        private System.Windows.Forms.Label labelAccX;
+        private System.Windows.Forms.Label labelAccY;
+        private System.Windows.Forms.Label labelAccZ;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.GroupBox verilergroupBox;
+        private System.Windows.Forms.PictureBox pictureBoxyoutube;
+        private System.Windows.Forms.PictureBox pictureBoxinstagram;
+        private System.Windows.Forms.PictureBox pictureBoxlinkedin;
+        private System.Windows.Forms.PictureBox pictureBoxgithub;
+        private System.Windows.Forms.Label labelenlemgps;
+        private System.Windows.Forms.Label labelboylamgps;
     }
 }

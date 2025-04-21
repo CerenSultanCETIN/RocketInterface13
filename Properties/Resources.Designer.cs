@@ -73,6 +73,36 @@ namespace RocketInterface13.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap GitHub {
+            get {
+                object obj = ResourceManager.GetObject("GitHub", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap Instagram {
+            get {
+                object obj = ResourceManager.GetObject("Instagram", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap LinkedIn {
+            get {
+                object obj = ResourceManager.GetObject("LinkedIn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap parachute {
             get {
                 object obj = ResourceManager.GetObject("parachute", resourceCulture);
@@ -96,6 +126,16 @@ namespace RocketInterface13.Properties {
         internal static System.Drawing.Bitmap tik {
             get {
                 object obj = ResourceManager.GetObject("tik", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap YouTube {
+            get {
+                object obj = ResourceManager.GetObject("YouTube", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
